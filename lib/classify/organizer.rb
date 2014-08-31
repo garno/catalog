@@ -1,25 +1,27 @@
 module Classify
   class Organizer
-    def run!
-      downloaded_files.each do |file|
-        Drawer.all.each do |drawer|
-          if file.where_froms.select { |url| url.match(drawer.rule) }.compact
-            matching_drawer = drawer
-          end
+    def initialize(base_path:)
+      @base_path = base_path
+    end
 
-          file.put_in(drawer)
+    def run!
+      new_documents.each do |document|
+        matcher = DrawerMatcher.new(document: document)
+
+        if matcher.match?
+          DocumentMover.new(document: document, drawer: matcher.drawer).move!
         end
       end
     end
 
   private
 
-    def downloaded_files
-      file_list.map { |path| Classify::Document.new(path) }
+    def new_documents
+      unorganized_files.map { |path| Classify::Document.new(path: path) }
     end
 
-    def file_list
-      Dir[File.expand_path('~/Downloads/*')].reject { |path| File.directory?(path) }
+    def unorganized_files
+      Dir[File.expand_path(@base_path)].reject { |path| File.directory?(path) }
     end
   end
 end
