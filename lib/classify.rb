@@ -1,9 +1,9 @@
 require 'yaml'
 
-load 'classify/models/document.rb'
-load 'classify/models/drawer.rb'
+require 'classify/models/document'
+require 'classify/models/drawer'
 
-load 'classify/organizer.rb'
+require 'classify/organizer'
 
 module Classify
 end
