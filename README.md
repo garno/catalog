@@ -1,5 +1,5 @@
 # Catalog
-*Catalog prevent your download folder from being a mess on Mac Os X.*
+*Catalog prevents your download folder from being a mess on Mac Os X.*
 
 ## The problem
 

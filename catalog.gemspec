@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Catalog::VERSION
   spec.authors       = ['Samuel Garneau']
   spec.email         = ['sam@garno.me']
-  spec.description   = 'Catalog prevent your download folder from being a mess on Mac Os X.'
-  spec.summary       = 'Catalog prevent your download folder from being a mess on Mac Os X.'
+  spec.description   = 'Catalog prevents your download folder from being a mess on Mac Os X.'
+  spec.summary       = 'Catalog prevents your download folder from being a mess on Mac Os X.'
   spec.homepage      = 'https://github.com/garno/catalog'
   spec.license       = 'MIT'
 
