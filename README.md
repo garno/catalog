@@ -25,15 +25,17 @@ The current version **doesn't include a CLI**. You'll have to use it through IRB
 
 As mentionned above, *catalog* does not offer a CLI at the moment. You have to load it with IRB.
 
-```irb
-irb > require 'catalog'
+```ruby
+> require 'catalog'
 => true
 
 # Default location is ~/Downloads
-irb > Catalog::Organizer.new.run!
+> Catalog::Organizer.new.run!
+=> true
 
 # However, you can specify your own
-irb > Catalog::Organizer.new(base_path: '/Volumes/Downloads/).run!
+> Catalog::Organizer.new(base_path: '/Volumes/Downloads/).run!
+=> true
 ```
 
 #### `~/.catalog` example
