@@ -1,8 +1,8 @@
-module Classify
+module Catalog
   module Error
     class ConfigurationMissing < StandardError
       def to_s
-        '~/.classify is missing'
+        '~/.catalog.yml is missing'
       end
     end
   end

@@ -1,4 +1,4 @@
-module Classify
+module Catalog
   class Document
     attr_accessor :path
 

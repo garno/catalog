@@ -1,4 +1,4 @@
-module Classify
+module Catalog
   class Drawer
     attr_accessor :rule, :path
 
@@ -8,7 +8,7 @@ module Classify
     end
 
     def self.all
-      Classify::Config.drawers.map { |attributes| self.class.new(attributes) }
+      Catalog::Config.drawers.map { |attributes| self.class.new(attributes) }
     end
   end
 end

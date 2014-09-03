@@ -1,4 +1,4 @@
-module Classify
+module Catalog
   class DocumentMover
     def initialize(document:, drawer:)
       @document = document

@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-RSpec.describe Classify::DocumentMover do
-  let(:mover) { Classify::DocumentMover.new(document: document, drawer: drawer) }
-  let(:document) { Classify::Document.new(path: '/path/to/document.pdf') }
-  let(:drawer) { Classify::Drawer.new(path: '/path/to/drawer', rule: nil) }
+RSpec.describe Catalog::DocumentMover do
+  let(:mover) { Catalog::DocumentMover.new(document: document, drawer: drawer) }
+  let(:document) { Catalog::Document.new(path: '/path/to/document.pdf') }
+  let(:drawer) { Catalog::Drawer.new(path: '/path/to/drawer', rule: nil) }
 
   describe :move! do
     specify do

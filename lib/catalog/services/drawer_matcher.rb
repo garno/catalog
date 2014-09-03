@@ -1,4 +1,4 @@
-module Classify
+module Catalog
   class DrawerMatcher
     # Accessors
     attr_reader :drawer
@@ -8,7 +8,7 @@ module Classify
     end
 
     def match?
-      Classify::Drawer.all.each do |drawer|
+      Catalog::Drawer.all.each do |drawer|
         document_where_froms.each do |url|
           @drawer = drawer if /#{drawer.rule}/.match(url)
 

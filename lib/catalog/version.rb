@@ -1,3 +1,3 @@
-module Classify
+module Catalog
   VERSION = '0.1.1'
 end

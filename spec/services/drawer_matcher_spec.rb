@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-RSpec.describe Classify::DrawerMatcher do
-  let(:matcher) { Classify::DrawerMatcher.new(document: document) }
-  let(:document) { Classify::Document.new(path: '/path/to/document') }
+RSpec.describe Catalog::DrawerMatcher do
+  let(:matcher) { Catalog::DrawerMatcher.new(document: document) }
+  let(:document) { Catalog::Document.new(path: '/path/to/document') }
 
-  before { expect(Classify::Drawer).to receive(:all).and_return(drawers) }
+  before { expect(Catalog::Drawer).to receive(:all).and_return(drawers) }
 
   describe :match? do
-    let(:drawers) { [Classify::Drawer.new(rule: 'basecamp', path: '/path/to/drawer')] }
+    let(:drawers) { [Catalog::Drawer.new(rule: 'basecamp', path: '/path/to/drawer')] }
 
     context 'with a matching drawer' do
       specify do
@@ -26,8 +26,8 @@ RSpec.describe Classify::DrawerMatcher do
     context 'with two matching drawers' do
       let(:drawers) do
         [
-          Classify::Drawer.new(rule: 'basecamp', path: '/path/to/drawer'),
-          Classify::Drawer.new(rule: 'base', path: '/path/to/drawer')
+          Catalog::Drawer.new(rule: 'basecamp', path: '/path/to/drawer'),
+          Catalog::Drawer.new(rule: 'base', path: '/path/to/drawer')
         ]
       end
 
@@ -35,7 +35,7 @@ RSpec.describe Classify::DrawerMatcher do
         expect(matcher).to receive(:document_where_froms).and_return(['http://basecamp.com/path/to/document.pdf'])
         expect(matcher.match?).to be_truthy
 
-        # For now, classify simply select the first
+        # For now, Catalog simply select the first
         # matching drawer. Keep that in mind.
         expect(matcher.drawer).to eq(drawers.first)
       end

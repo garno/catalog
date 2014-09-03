@@ -1,4 +1,4 @@
-module Classify
+module Catalog
   class Organizer
     def initialize(base_path:)
       @base_path = base_path
@@ -17,7 +17,7 @@ module Classify
   private
 
     def new_documents
-      unorganized_files.map { |path| Classify::Document.new(path: path) }
+      unorganized_files.map { |path| Document.new(path: path) }
     end
 
     def unorganized_files

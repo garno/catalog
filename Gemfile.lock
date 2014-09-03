@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    classify (0.1.1)
+    catalog (0.1.1)
       hashie
 
 GEM
@@ -28,6 +28,6 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.3)
-  classify!
+  catalog!
   rake
   rspec

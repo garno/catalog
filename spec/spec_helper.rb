@@ -1,6 +1,6 @@
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 
-require 'classify'
+require 'catalog'
 
 RSpec.configure do |config|
   config.expect_with :rspec do |c|
