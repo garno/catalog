@@ -34,7 +34,7 @@ As mentionned above, *catalog* does not offer a CLI at the moment. You have to l
 => true
 
 # However, you can specify your own
-> Catalog::Organizer.new(base_path: '/Volumes/Downloads/).run!
+> Catalog::Organizer.new(base_path: '/Volumes/Downloads/').run!
 => true
 ```
 
