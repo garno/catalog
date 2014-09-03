@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.description   = 'Catalog prevent your download folder from being a mess on Mac Os X.'
   spec.summary       = 'Catalog prevent your download folder from being a mess on Mac Os X.'
   spec.homepage      = 'https://github.com/garno/catalog'
-  spec.license       = 'BSD 3-Clause'
+  spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
   spec.require_paths = ['lib']
