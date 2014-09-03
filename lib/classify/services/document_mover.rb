@@ -6,15 +6,18 @@ module Classify
     end
 
     def move!
-      create_drawer_folder
-
-      FileUtils.mv(@document.path, @drawer.path)
+      create_drawer_folder!
+      move_file!
     end
 
   private
 
-    def create_drawer_folder
+    def create_drawer_folder!
       FileUtils.mkdir_p(@drawer.path) unless File.directory?(@drawer.path)
+    end
+
+    def move_file!
+      FileUtils.mv(@document.path, @drawer.path)
     end
   end
 end
