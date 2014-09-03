@@ -1,7 +1,7 @@
 module Catalog
   class Organizer
-    def initialize(base_path:)
-      @base_path = base_path
+    def initialize(base_path: nil)
+      @base_path = base_path || '~/Downloads/*'
     end
 
     def run!
@@ -12,6 +12,8 @@ module Catalog
           DocumentMover.new(document: document, drawer: matcher.drawer).move!
         end
       end
+
+      true
     end
 
   private
