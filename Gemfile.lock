@@ -2,13 +2,11 @@ PATH
   remote: .
   specs:
     catalog (0.1.1)
-      hashie
 
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    hashie (3.3.1)
     rake (10.3.2)
     rspec (3.0.0)
       rspec-core (~> 3.0.0)
