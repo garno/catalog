@@ -47,14 +47,14 @@ drawers:
     path: /Users/garno/Downloads/Basecamp/ProjectName/
   - rule: basecamp.com
     path: /Users/garno/Downloads/Basecamp/
-  
+
   # DMGs
   - rule: \.(?:dmg)$
-  - path: /Users/garno/Downloads/DMGs/
+    path: /Users/garno/Downloads/DMGs/
 
   # Alfred workflows
   - rule: \.(?:alfredworkflow)$
-  	 path: /Users/garno/Downloads/Alfred workflows/
+    path: /Users/garno/Downloads/Alfred workflows/
 ```
 
 **Rules order is really important** since a file will be moved according to the first matched rule.
