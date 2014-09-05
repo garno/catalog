@@ -1,11 +1,11 @@
 # Catalog
-*Catalog prevents your download folder from being a mess on Mac Os X.*
+*Catalog prevents your download folder from being a mess on your Mac.*
 
 ## The problem
 
-The *Downloads* folder on a Mac is the most clusttered folder there is. Even with the best intentions, we end up not cleaning it as often as we should.
+The *Downloads* folder on a Mac is the most cluttered folder there is. Even with the best intentions, we end up not cleaning it as often as we should.
 
-*Catalog* allow us to create rules to automatically organize your downloads based on its origin (*i.e. http://someurl.com/path/to/file.pdf*).
+*Catalog* allow us to create rules to automatically organize your downloads based on their origin (*i.e. http://someurl.com/path/to/file.pdf*).
 
 ## Installation
 
@@ -19,7 +19,7 @@ $ touch ~/.catalog
 
 ## State of project
 
-The current version **doesn't include a CLI**. You'll have to use it through IRB as you can see in the [How to use](#how-to-use) section. The next step will be to provide a CLI using guard and a way to easily deamonize this.
+The current version **doesn't include a CLI**. You'll have to use it through IRB as you can see in the [How to use](#how-to-use) section. The next step will be to provide a CLI and a way to easily deamonize this.
 
 ## How to use
 
