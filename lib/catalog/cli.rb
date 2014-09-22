@@ -13,7 +13,7 @@ module Catalog
     end
 
     def run
-      # Override .catalog file location
+      # Override .catalog.yml file location
       Catalog::Config.config_path(@options[:config]) if @options[:config]
 
       # Run to organizer
