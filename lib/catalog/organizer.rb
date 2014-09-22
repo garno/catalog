@@ -1,7 +1,7 @@
 module Catalog
   class Organizer
     def initialize(base_path: nil)
-      @base_path = base_path || '~/Downloads/*'
+      @base_path = "#{base_path}/*" || '~/Downloads/*'
     end
 
     def run!

@@ -1,3 +1,5 @@
+require 'fileutils'
+
 module Catalog
   class DocumentMover
     def initialize(document:, drawer:)

@@ -1,3 +1,5 @@
+require 'uri'
+
 module Catalog
   class DrawerMatcher
     # Accessors

@@ -1,9 +1,13 @@
 require 'yaml'
 require 'shellwords'
+require 'optparse'
 
 # Core
 require 'catalog/organizer'
 require 'catalog/config'
+
+# CLI
+require 'catalog/cli'
 
 # Models
 require 'catalog/models/document'

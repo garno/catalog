@@ -4,11 +4,21 @@ module Catalog
       config['drawers']
     end
 
+    def self.config_path(path = nil)
+      if path
+        @config_path
+      else
+        @config_path = path
+      end
+
+      File.expand_path(@config_path || '~/.catalog.yml')
+    end
+
   private
 
     def self.config
       unless @config
-        raw_content = File.read(File.expand_path('~/.catalog.yml'))
+        raw_content = File.read(config_path)
         @config = YAML.load(raw_content)
       end
 
